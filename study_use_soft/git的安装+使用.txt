@@ -45,7 +45,7 @@ done:
 
 配置远程仓库：
         CMD
-        1、添加远程库，生成SSH的key：ssh-keygen -t rsa -C '508186387@qq.com'
+        1、添加远程库，生成SSH的key：ssh-keygen -t rsa -C 'v_gyicheng@tencent.com' 222222222222222
                 用户目录下面/.shh 目录（公钥 私钥）
                         私钥：复制
                 git个人账号/sttings/ssh and gpg keys/new /起名字把密钥复制进去
