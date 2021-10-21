@@ -5,8 +5,9 @@ git branch 新建分支
 
 分支创建文件--->往远程git仓库提交
 
-pycharm 我再main分支修改了下----我把这个文件删除了
 
-1、file--->settings--->version control---->git---->选择git安装路径
+1、file--->settings--->version control---->git   ---->选择git安装路径
 2、file--->settings--->version control---->gitHub---->连接自己git账号
-3、file---->close_project---->get_from_VCS----->连接git，done自己的项目
+3、file---->close_project---->get_from_VCS       ----->连接git，done自己的项目
+
+git pull push add commit merge
