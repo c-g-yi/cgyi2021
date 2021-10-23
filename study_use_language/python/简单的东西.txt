@@ -1,0 +1,9 @@
+一、pycharm：
+    power save mode :省电模式（file下面如果开启省电模式，不会进行代码提示）
+二、python
+    1、字符串前面加字母：https://www.cnblogs.com/liangmingshen/p/9274021.html
+        1.1：r 去掉反斜杠的转义机制。：
+            b 字节
+            u Unicode
+
+相对路径 vs 绝对路径

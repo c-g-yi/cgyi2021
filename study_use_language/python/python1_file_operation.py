@@ -34,12 +34,12 @@ open（文件路径 ， '读取模式'，文件编码）
 
     write()     不换行写
     wtiteline() 换行写
-    writeable()：是否可写  是true否false
+    writeable()：判断是否可写  是true否false
 
     close()关闭流对象
 """
-# 1、读
-# file_temp_read = open("F:/20210809/cgyi2021/study_use_language/1.txt", 'rb')
+# 1、读F:\20210809\cgyi2021
+file_temp_read = open("F:/20210809/cgyi2021/study_use_language/1.txt", 'r', encoding='utf-8')
 # read(30)读多少个字节
 # print(file_temp_read.read(30))
 # readline()读一行
@@ -53,7 +53,7 @@ open（文件路径 ， '读取模式'，文件编码）
 # print(file_temp_read.readable())
 
 # # 二、写
-# file_temp_write = open("D:/cgyi2021/study_use_language/python/2.txt", 'ab')
+file_temp_write = open("F:/20210809/cgyi2021/study_use_language/python/2.txt", 'a')
 # # 判断文件是否能读取
 # if file_temp_write.writable():
 #     for file_cone in file_temp_read.readlines():
@@ -63,7 +63,20 @@ open（文件路径 ， '读取模式'，文件编码）
 # # file_temp_write.write(2)
 #
 # file_temp_write.close()
-# file_temp_read2 = open("D:/cgyi2021/study_use_language/python/不可读文件.txt", 'r')
+# file_temp_read2 = open("F:/20210809/cgyi2021/study_use_language/python/不可读文件.txt", 'a')
 # print(file_temp_read2.readable())
+# file_temp_write.write(file_temp_read.readline())
+# print(file_temp_write.writable())
+# print(file_temp_read.readable())
+if file_temp_write.writable():
+    for file_content in file_temp_read.readlines():
+        # print(file_content)
+        file_temp_write.write(file_content)
 
-# file_add_content = open("")
+# 关闭文件流对象
+# 关闭文件，释放操作系统资源（自带的垃圾回收机制会）
+file_temp_read.close()
+file_temp_write.close()
+
+with open("test.txt", 'a', encoding="utf-8") as test_file:
+    test_file.write("我是中国")

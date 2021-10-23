@@ -2,6 +2,13 @@
 # -*- coding: utf-8 -*-
 import os
 
+"""
+    os模块
+    
+    os.path 
+    
+        判断路径是否是绝对路径
+"""
 # 文件路径，
 print(os.path)
 print(os.path, type(os.path))
@@ -12,3 +19,6 @@ file_path = os.path.join(os.path.dirname(__file__), 'os创建的文件')
 
 # os_file_temp = os.open("写文件2.txt", 'w')
 # print(os_file_temp)
+
+file_is_jdlj = os.path.isabs(r"F:\20210809\cgyi2021\study_use_language\python\简单的东西.txt")
+print(file_is_jdlj)
