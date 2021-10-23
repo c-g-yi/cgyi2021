@@ -39,7 +39,7 @@ open（文件路径 ， '读取模式'，文件编码）
     close()关闭流对象
 """
 # 1、读
-file_temp_read = open("D:/cgyi2021/study_use_language/1.txt", 'rb')
+# file_temp_read = open("F:/20210809/cgyi2021/study_use_language/1.txt", 'rb')
 # read(30)读多少个字节
 # print(file_temp_read.read(30))
 # readline()读一行
@@ -52,16 +52,18 @@ file_temp_read = open("D:/cgyi2021/study_use_language/1.txt", 'rb')
 # readable()判断文件是不是可读的
 # print(file_temp_read.readable())
 
-# 二、写
-file_temp_write = open("D:/cgyi2021/study_use_language/python/写文件.txt", 'ab')
-# 判断文件是否能读取
-if file_temp_write.writable():
-    for file_cone in file_temp_read.readlines():
-        file_temp_write.write(file_cone)
-else:
-    print("文件不可写")
-# file_temp_write.write(2)
-
-file_temp_write.close()
+# # 二、写
+# file_temp_write = open("D:/cgyi2021/study_use_language/python/2.txt", 'ab')
+# # 判断文件是否能读取
+# if file_temp_write.writable():
+#     for file_cone in file_temp_read.readlines():
+#         file_temp_write.write(file_cone)
+# else:
+#     print("文件不可写")
+# # file_temp_write.write(2)
+#
+# file_temp_write.close()
 # file_temp_read2 = open("D:/cgyi2021/study_use_language/python/不可读文件.txt", 'r')
 # print(file_temp_read2.readable())
+
+# file_add_content = open("")
