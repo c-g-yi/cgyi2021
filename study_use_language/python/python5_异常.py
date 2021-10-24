@@ -18,6 +18,7 @@
     4、当try里面没有异常会进入else  try里面不能有return
     5、无论有没有异常都会进入finally 以finally里面的为主
 二、抛出异常
+    raise Exception(异常提示信息)
 """
 
 
