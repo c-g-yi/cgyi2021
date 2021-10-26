@@ -21,7 +21,8 @@
 生成器：为了节省内存 一个一个取到元素
 迭代器：iter()：return一个迭代器
 """
-from collections import Iterable
+# from collections import Iterable
+from collections.abc import Iterable  # 这是不会报警告的用法
 
 temp_list = [1, 2, 3]
 print(isinstance(temp_list, Iterable))
