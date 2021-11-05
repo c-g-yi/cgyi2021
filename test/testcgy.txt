@@ -1,0 +1,12 @@
+create table %(out_table)s_tmp1_%(p_date)s as
+        select  search_result_tab.p_date
+            ,nvl(get_json_object(search_result_tab.value, '$.searchid' ) ,get_json_object( search_result_tab.value, '$.commonev.searchid' )) as search_id
+            ,regexp_replace(get_json_object( value, '$.query' ), '\\u0001', '') as query-- 搜索关键字
+            ,max(if(get_json_object(search_result_tab.value, '$.result' )='true',1,0))    as search_result_flag -- 搜索是否有结果标识[1是；0否]   -- 取有返回结果优先
+        from csig_medicaldata :: dwd_biz_action_d search_result_tab
+        where p_date = %(p_date)s
+        and search_result_tab.event = 'searchoverall.result'
+        and nvl(get_json_object( search_result_tab.value, '$.searchid' ) ,get_json_object( search_result_tab.value, '$.commonev.searchid' )) is not null
+       group by  search_result_tab.p_date
+            ,nvl(get_json_object(search_result_tab.value, '$.searchid' ) ,get_json_object( search_result_tab.value, '$.commonev.searchid' ))
+            ,regexp_replace(get_json_object( value, '$.query' ), '\\u0001', '')

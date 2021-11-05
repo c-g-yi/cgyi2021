@@ -80,3 +80,8 @@ file_temp_write.close()
 
 with open("test.txt", 'a', encoding="utf-8") as test_file:
     test_file.write("我是中国")
+
+
+
+
+
